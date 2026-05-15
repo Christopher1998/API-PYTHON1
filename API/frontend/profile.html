@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil de usuario</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-md px-4">
+    <!-- Avatar -->
+    <div
+      class="show-avatar w-16 h-16 rounded-full bg-blue-100 text-blue-700 text-2xl font-medium flex items-center justify-center mx-auto mb-5">
+    </div>
+
+    <!-- Card -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-6">
+      <p class="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">
+        Account information
+      </p>
+
+      <!-- Campo usuario -->
+      <div class="mb-5">
+        <label for="username" class="block text-xs font-medium text-gray-500 mb-1">Username</label>
+        <div class="flex gap-2">
+          <input type="text" id="username" readonly autocomplete="off"
+            class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 read-only:cursor-default" />
+          <button onclick="toggleEdit('username')" id="btn-username"
+            class="flex items-center gap-1 px-3 py-2 text-xs border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 transition-colors whitespace-nowrap">
+            <i class="ti ti-edit" aria-hidden="true"></i> Edit
+          </button>
+        </div>
+      </div>
+
+      <hr class="border-gray-200 mb-5" />
+
+      <div class="mb-5 hidden" id="current-password-block">
+        <label for="current-password" class="block text-xs font-medium text-gray-500 mb-1">
+          Current password
+        </label>
+
+        <input type="password" id="current-password" placeholder="Current password"
+          class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Campo contraseña -->
+      <div class="mb-5">
+        <label for="password" class="block text-xs font-medium text-gray-500 mb-1">New password</label>
+        <div class="flex gap-2">
+          <input type="password" id="password" value="mypassword123" readonly oninput="checkMatch()"
+            class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 read-only:cursor-default" />
+          <button onclick="toggleEdit('password')" id="btn-password"
+            class="flex items-center gap-1 px-3 py-2 text-xs border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 transition-colors whitespace-nowrap">
+            <i class="ti ti-edit" aria-hidden="true"></i> Edit
+          </button>
+        </div>
+      </div>
+
+      <!-- Confirmar contraseña (oculto por defecto) -->
+      <div class="mb-5 hidden" id="confirm-block">
+        <label for="password-confirm" class="block text-xs font-medium text-gray-500 mb-1">Confirm password</label>
+        <input type="password" id="password-confirm" placeholder="Repite la contraseña" oninput="checkMatch()"
+          class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <p class="text-xs mt-1 min-h-[16px]" id="match-hint"></p>
+      </div>
+
+      <!-- Botón guardar -->
+      <button type="button" id="save-btn"
+        class="w-full py-2.5 bg-blue-700 hover:bg-blue-800 disabled:opacity-40 disabled:cursor-not-allowed text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2">
+        <i class="ti ti-check"></i>
+        Save changes
+      </button>
+
+      <!-- Botón devolver -->
+      <a href="./dashboard.html"
+        class="mt-4 w-16 py-2.5 bg-red-700 hover:bg-red-800 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      </a>
+
+      <!-- Toast -->
+      <div id="toast"
+        class="hidden mt-4 px-4 py-3 bg-green-50 border border-green-200 text-green-700 text-sm rounded-lg text-center">
+        <i class="ti ti-check" aria-hidden="true"></i> Cambios guardados
+        correctamente
+      </div>
+    </div>
+
+<script type="module" src="./pages/profile.js"></script>
+</body>
+
+</html>

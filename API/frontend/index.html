@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="flex w-full max-w-3xl bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+
+    <!-- Panel izquierdo -->
+    <div class="hidden md:flex w-5/12 bg-blue-800 flex-col items-center justify-center p-10 gap-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-blue-700 p-2 rounded-lg">
+          <svg class="w-6 h-6 text-blue-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5" />
+          </svg>
+        </div>
+        <span class="text-blue-200 text-lg font-medium">CorpSuite</span>
+      </div>
+      <p class="text-blue-50 text-xl font-medium text-center leading-snug">
+        Manage your business<br />from one place
+      </p>
+      <p class="text-blue-300 text-sm text-center leading-relaxed">
+        Access reports, users,<br />and settings in real time.
+      </p>
+    </div>
+
+    <!-- Panel derecho (formulario) -->
+    <div class="flex-1 flex flex-col justify-center p-10">
+      <h2 class="text-xl font-medium text-gray-800 mb-1">Welcome again</h2>
+      <p class="text-sm text-gray-500 mb-7">Enter your credentials to continue.</p>
+
+      <form>
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-gray-500 mb-1">User</label>
+          <input type="text" name="user" placeholder="Username" required
+            class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+
+        <div class="mb-2">
+          <label class="block text-xs font-medium text-gray-500 mb-1">Password</label>
+          <input type="password" name="password" placeholder="••••••••" required
+            class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+
+        <div class="text-right mb-5">
+          <a href="#" class="text-xs text-blue-700 hover:underline">Forgot your password?</a>
+        </div>
+
+        <button type="submit"
+          class="w-full py-2.5 bg-blue-700 hover:bg-blue-800 text-blue-50 text-sm font-medium rounded-lg transition-colors">
+          Sign in
+        </button>
+      </form>
+      <div id="login-error"
+        class="hidden mt-4 px-4 py-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg text-center">
+      </div>
+
+      <div class="flex items-center gap-3 my-5">
+        <hr class="flex-1 border-gray-200" />
+        <span class="text-xs text-gray-400">Continue with</span>
+        <hr class="flex-1 border-gray-200" />
+      </div>
+
+      <button onclick="window.location.href='./registration.html'"
+        class="w-full py-2.5 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+        Sign up
+      </button>
+    </div>
+
+  </div>
+  <script type="module" src="./pages/login.js"></script>
+</body>
+
+</html>

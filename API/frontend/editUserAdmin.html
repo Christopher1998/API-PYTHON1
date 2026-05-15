@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Usuarios</title>
+  <link rel="stylesheet" href="./editUserAdmin.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="logo">MiApp</div>
+
+      <nav class="nav">
+        <a href="./dashboard.html">Dashboard</a>
+        <a class="active" href="./users.html">Usuarios</a>
+        <a href="./profile.html">Mi perfil</a>
+      </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <div class="topbar">
+
+        <div>
+          <h1>Usuarios</h1>
+          <p>Administra las cuentas registradas</p>
+        </div>
+
+        <button class="btn">
+          + Nuevo usuario
+        </button>
+
+      </div>
+
+      <!-- TABLA -->
+      <div class="card">
+
+        <div class="card-header">
+          <span class="card-title">Lista de usuarios</span>
+        </div>
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Nombre</th>
+              <th>Estado</th>
+              <th>Activar / Desactivar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+
+          <tbody id="users-table-body">
+
+            <!-- JS INYECTA LOS USUARIOS -->
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </main>
+
+  </div>
+  <div class="modal-bg" id="modal">
+  <div class="modal">
+    <h3>¿Eliminar usuario?</h3>
+    <p id="modal-msg"></p>
+    <div class="modal-actions">
+      <button id="btn-cancel">Cancelar</button>
+      <button id="btn-confirm">Sí, eliminar</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="./pages/editUserAdmin.js" ></script>
+</body>
+</html>

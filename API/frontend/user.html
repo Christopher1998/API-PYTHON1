@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./user.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+
+<body>
+    <div class="dash">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-mark"></div>
+                <span class="logo-text">MiApp</span>
+            </div>
+
+            <span class="nav-label">General</span>
+            <a class="nav-item active" href="#">
+                <i class="ti ti-layout-dashboard" aria-hidden="true"></i> Dashboard
+            </a>
+            <a class="nav-item" href="#">
+                <i class="ti ti-file-text" aria-hidden="true"></i> Reportes
+            </a>
+            <a class="nav-item" href="#">
+                <i class="ti ti-settings" aria-hidden="true"></i> Configuración
+            </a>
+
+            <span class="nav-label">Cuenta</span>
+            <a class="nav-item" href="#">
+                <i class="ti ti-user" aria-hidden="true"></i> Mi perfil
+            </a>
+            <a id="btn-logout" class="nav-item danger" href="#">
+                <i class="ti ti-logout" aria-hidden="true"></i> Cerrar sesión
+            </a>
+
+            <div class="sidebar-footer">
+                <div class="user-chip">
+                    <div class="show-avatar avatar-lg"></div>
+                    <div>
+                        <div class="show-username"></div>
+                        <div class="user-role">Usuario</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main">
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Miércoles, 8 de mayo de 2026</p>
+                </div>
+                <div class="api-badge">
+                    <div class="dot"></div>
+                    API activa
+                </div>
+            </header>
+
+            <div class="content">
+
+                <div class="welcome">
+                    <div class="avatar-lg show-avatar">MR</div>
+                    <div>
+                        <div class="show-username" class="welcome-title"></div>
+                        <div class="welcome-sub">Última sesión: hoy a las 9:14 a.m. · Todo al día</div>
+                    </div>
+                </div>
+
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="metric-label">Sesiones este mes</div>
+                        <div class="metric-value">24</div>
+                        <div class="metric-sub">desde el 1 de mayo</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Último acceso</div>
+                        <div class="metric-value" style="font-size:15px;padding-top:4px">Hoy, 9:14</div>
+                        <div class="metric-sub">desde Costa Rica</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-label">Cuenta activa</div>
+                        <div class="metric-value">142 días</div>
+                        <div class="metric-sub">desde enero 2026</div>
+                    </div>
+                </div>
+
+                <div class="grid2">
+                    <div class="card">
+                        <div class="card-title">Actividad reciente</div>
+                        <div class="activity-item">
+                            <div class="act-icon blue"><i class="ti ti-login" aria-hidden="true"></i></div>
+                            <div>
+                                <div class="act-text">Inicio de sesión exitoso</div>
+                                <div class="act-time">Hoy, 9:14 a.m.</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="act-icon amber"><i class="ti ti-edit" aria-hidden="true"></i></div>
+                            <div>
+                                <div class="act-text">Nombre de usuario actualizado</div>
+                                <div class="act-time">Ayer, 3:42 p.m.</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="act-icon green"><i class="ti ti-lock" aria-hidden="true"></i></div>
+                            <div>
+                                <div class="act-text">Contraseña cambiada correctamente</div>
+                                <div class="act-time">Lun 5 may, 11:20 a.m.</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="act-icon blue"><i class="ti ti-login" aria-hidden="true"></i></div>
+                            <div>
+                                <div class="act-text">Inicio de sesión exitoso</div>
+                                <div class="act-time">Lun 5 may, 11:15 a.m.</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="act-icon red"><i class="ti ti-alert-circle" aria-hidden="true"></i></div>
+                            <div>
+                                <div class="act-text">Intento de sesión fallido</div>
+                                <div class="act-time">Dom 4 may, 8:03 p.m.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;flex-direction:column;gap:14px">
+                        <div class="card">
+                            <div class="card-title">Información de cuenta</div>
+                            <div class="info-row">
+                                <span class="info-label"><i class="ti ti-user" aria-hidden="true"></i> Username</span>
+                                <span class="show-username" class="info-val"></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label"><i class="ti ti-id-badge" aria-hidden="true"></i> ID de
+                                    usuario</span>
+                                <span class="info-val show-id"></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label"><i class="ti ti-calendar" aria-hidden="true"></i> Miembro
+                                    desde</span>
+                                <span class="info-val">Ene 2026</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label"><i class="ti ti-circle-check" aria-hidden="true"></i>
+                                    Estado</span>
+                                <span class="badge active">Activo</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-title">Acciones rápidas</div>
+                            <div class="quick-actions">
+                                <button class="action-btn"><i class="ti ti-user-edit" aria-hidden="true"></i> Editar
+                                    perfil</button>
+                                <button class="action-btn"><i class="ti ti-lock" aria-hidden="true"></i> Cambiar
+                                    clave</button>
+                                <button class="action-btn"><i class="ti ti-file-text" aria-hidden="true"></i> Ver
+                                    reportes</button>
+                                <button class="action-btn"><i class="ti ti-bell" aria-hidden="true"></i>
+                                    Notificaciones</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script type="module" src="./pages/user.js"></script>
+</body>
+
+</html>

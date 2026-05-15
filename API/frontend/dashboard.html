@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-mark"></div>
+      <span class="logo-text">MiApp</span>
+    </div>
+
+    <span class="nav-label">General</span>
+
+    <a class="nav-item active" href="#">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none">
+        <rect x="1" y="1" width="6" height="6" rx="1.5" fill="#4A3FD4"/>
+        <rect x="9" y="1" width="6" height="6" rx="1.5" fill="#4A3FD4" opacity=".4"/>
+        <rect x="1" y="9" width="6" height="6" rx="1.5" fill="#4A3FD4" opacity=".4"/>
+        <rect x="9" y="9" width="6" height="6" rx="1.5" fill="#4A3FD4" opacity=".4"/>
+      </svg>
+      Dashboard
+    </a>
+
+    <a class="nav-item" href="./editUserAdmin.html">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="6" r="3" fill="#7A7870"/>
+        <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5" stroke="#7A7870" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Usuarios
+    </a>
+
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none">
+        <rect x="2" y="2" width="12" height="12" rx="2" stroke="#7A7870" stroke-width="1.5"/>
+        <path d="M5 8h6M5 5h6M5 11h3" stroke="#7A7870" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      Reportes
+    </a>
+
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="2.5" stroke="#7A7870" stroke-width="1.5"/>
+        <path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" stroke="#7A7870" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      Configuración
+    </a>
+
+    <span class="nav-label">Cuenta</span>
+
+    <a class="nav-item" href="./profile.html">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none">
+        <path d="M6 8l2 2 4-4" stroke="#7A7870" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="1.5" y="1.5" width="13" height="13" rx="3" stroke="#7A7870" stroke-width="1.2"/>
+      </svg>
+      Mi perfil
+    </a>
+
+    <a id="btn-logout" class="nav-item" href="#" style="color: var(--red);">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none">
+        <path d="M10 8H3M3 8l2.5-2.5M3 8l2.5 2.5" stroke="#D83030" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 3h5a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7" stroke="#D83030" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      Cerrar sesión
+    </a>
+
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="show-avatar avatar"></div>
+        <div class="user-info">
+          <div class="show-username name"></div>
+          <div id="rol" class="role"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── MAIN ── -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1>Dashboard</h1>
+        <p>Martes, 6 de mayo de 2025</p>
+      </div>
+      <div class="topbar-right">
+        <div class="badge-dot"></div>
+        <span style="font-size:13px; color:var(--muted);">API activa</span>
+        <a class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 inline-block btn" href="registration.html">+ Nuevo usuario</a>
+        
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- MÉTRICAS -->
+      <div class="metrics">
+        <div class="metric-card">
+          <div class="metric-label">Usuarios registrados</div>
+          <div class="metric-value">1,284</div>
+          <span class="metric-tag tag-green">+12% este mes</span>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Sesiones activas</div>
+          <div class="metric-value">47</div>
+          <span class="metric-tag tag-accent">En tiempo real</span>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Solicitudes hoy</div>
+          <div class="metric-value">3,902</div>
+          <span class="metric-tag tag-green">+8% vs ayer</span>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Errores hoy</div>
+          <div class="metric-value">2</div>
+          <span class="metric-tag tag-red">Ver detalle</span>
+        </div>
+      </div>
+
+      <!-- GRID 2 COLS -->
+      <div class="grid-2">
+
+        <!-- TABLA DE USUARIOS -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Usuarios recientes</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Nombre de usuario</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <!-- Se inyectan las tablas desde Javascript -->
+            <tbody id="users-table-body">
+            </tbody>
+          </table>
+        </div>
+      
+
+        <!-- COLUMNA DERECHA -->
+        <div style="display:flex;flex-direction:column;gap:16px;">
+
+          <!-- ACTIVIDAD -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Actividad reciente</span>
+            </div>
+            <div class="activity-list">
+              <div class="act-item">
+                <div class="act-line">
+                  <div class="act-dot" style="background:var(--green);"></div>
+                  <div class="act-connector"></div>
+                </div>
+                <div class="act-body">
+                  <div class="act-desc"><strong>carlos@mail.com</strong> se registró</div>
+                  <div class="act-time">hace 5 min</div>
+                </div>
+              </div>
+              <div class="act-item">
+                <div class="act-line">
+                  <div class="act-dot" style="background:var(--accent);"></div>
+                  <div class="act-connector"></div>
+                </div>
+                <div class="act-body">
+                  <div class="act-desc">Login exitoso desde IP 192.168.1.4</div>
+                  <div class="act-time">hace 18 min</div>
+                </div>
+              </div>
+              <div class="act-item">
+                <div class="act-line">
+                  <div class="act-dot" style="background:var(--red);"></div>
+                  <div class="act-connector"></div>
+                </div>
+                <div class="act-body">
+                  <div class="act-desc">Error 500 en <strong>POST /users</strong></div>
+                  <div class="act-time">hace 42 min</div>
+                </div>
+              </div>
+              <div class="act-item">
+                <div class="act-line">
+                  <div class="act-dot" style="background:var(--amber);"></div>
+                </div>
+                <div class="act-body">
+                  <div class="act-desc">Perfil actualizado por <strong>ana@mail.com</strong></div>
+                  <div class="act-time">hace 1 hora</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- USO DE MÓDULOS -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Uso por módulo</span>
+            </div>
+            <div class="bar-list">
+              <div class="bar-item">
+                <div class="bar-meta"><span>Registro</span><span>74%</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:74%;background:#4A3FD4;"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>Login</span><span>58%</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:58%;background:#1D9E75;"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>Perfil</span><span>33%</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:33%;background:#BA7517;"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>Reportes</span><span>21%</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:21%;background:#D4537E;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+<script type="module" src="./pages/dashboard.js"></script>
+</body>
+</html>
